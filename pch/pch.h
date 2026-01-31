@@ -5,3 +5,5 @@
 #include <limits>
 #include <string>
 #include <iostream>
+#include <cstdint>
+#include <array>
