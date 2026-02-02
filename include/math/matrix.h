@@ -2,8 +2,20 @@
 
 namespace GP {
     template<std::size_t Rows, std::size_t Cols>
+    requires(Rows > 0 && Cols > 0)
     class Matrix {
     public:
+        Matrix() = default;
+        Matrix(std::initializer_list<std::initializer_list<float>> init) {
+            std::size_t i = 0;
+            for (auto rowIt = init.begin(); rowIt != init.end() && i < Rows; ++rowIt, ++i) {
+                std::size_t j = 0;
+                for (auto colIt = rowIt->begin(); colIt != rowIt->end() && j < Cols; ++colIt, ++j) {
+                    m[i][j] = *colIt;
+                }
+            }
+        }
+
         const std::array<float, Cols>& operator [](size_t i) const {
             return m[i];
         }

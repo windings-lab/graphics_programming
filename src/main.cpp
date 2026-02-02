@@ -4,8 +4,8 @@ int main()
 {
     using namespace GP;
 
-    Matrix<4, 4> matrix;
-    Matrix<4, 2> matrix2;
+    Matrix<1, 3> matrix;
+    Matrix<3, 3> matrix2;
 
     std::cout << matrix * matrix2 << std::endl;
 

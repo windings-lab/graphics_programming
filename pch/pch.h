@@ -7,3 +7,4 @@
 #include <iostream>
 #include <cstdint>
 #include <array>
+#include <initializer_list>
